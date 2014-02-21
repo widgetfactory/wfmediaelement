@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+    <name>PLG_WFMEDIAELEMENT_XML_TITLE</name>
+    <author>Ryan Demmer</author>
+    <creationDate>@@date@@</creationDate>
+    <copyright>@@copyright@@</copyright>
+    <license>@@licence@@</license>
+    <authorEmail>@@email@@</authorEmail>
+    <authorUrl>www.joomlacontenteditor.net</authorUrl>
+    <version>@@version@@</version>
+    <description>PLG_WFMEDIAELEMENT_XML_DESCRIPTION</description>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="components" type="text" size="50" default="" label="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_DESC" />
+                <field name="menu" type="menuitem" state="1" default="" multiple="multiple" size="10" label="PLG_WFMEDIAELEMENT_FIELD_MENUS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_MENUS_DESC" />
+                <field name="jquery" type="radio" default="1" label="PLG_WFMEDIAELEMENT_FIELD_JQUERY_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_JQUERY_DESC">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+	
+    <files folder="plugins/system/wfmediaelement">
+        <file plugin="wfmediaelement">wfmediaelement.php</file>
+        <folder>css</folder>
+        <folder>js</folder>
+    </files>
+    
+    <languages folder="administrator/language/en-GB">
+        <language tag="en-GB">en-GB.plg_system_wfmediaelement.ini</language>
+        <language tag="en-GB">en-GB.plg_system_wfmediaelement.sys.ini</language>
+    </languages>
+    
+    <updateservers>
+	<server type="extension" priority="1" name="WF MediaElement Updates"><![CDATA[https://www.joomlacontenteditor.net/index.php?option=com_updates&view=update&format=xml&id=29]]></server>
+    </updateservers>
+</extension>
