@@ -103,7 +103,7 @@ class plgSystemWfmediaelement extends JPlugin {
             } else {
                 // check if loaded
                 if (!$app->get('jquery')) {
-                    $document->addScript(JURI::root() . '/plugins/system/wfmediaelement/js/jquery-1.11.0.min.js');
+                    $document->addScript(JURI::root() . '/plugins/system/wfmediaelement/js/jquery-1.11.2.min.js');
                     $document->addScriptDeclaration('jQuery.noConflict();');
                     // flag as loaded
                     $app->set('jquery', true);
