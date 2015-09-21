@@ -10,7 +10,7 @@ Install using the Joomla Extensions Installer
 https://docs.joomla.org/Installing_an_extension
 
 ## What it does
-This plugin uses MediaElement to create a cross-browser player (using HTML and CSS, and flash where necessary) for the <video> and <audio> tags.
+This plugin uses MediaElement to create a cross-browser player (using HTML and CSS, and flash where necessary) for the &lt;video&gt; and &lt;audio&gt; tags.
 
 ## How to use it
 Once installed, remember to enable the plugin. Once enabled, all video and audio tags will be converted into the new player when the page loads.
