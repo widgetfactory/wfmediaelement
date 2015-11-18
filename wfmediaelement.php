@@ -26,13 +26,6 @@ class plgSystemWfmediaelement extends JPlugin {
     private $version = '@@version@@';
 
     /**
-     * Constructor
-     */
-    public function plgSystemWfmediaelement(&$subject, $config) {
-        parent::__construct($subject, $config);
-    }
-
-    /**
      * onAfterDispatch function
      * @return Boolean true
      */
