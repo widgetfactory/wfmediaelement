@@ -113,10 +113,11 @@ class plgSystemWfmediaelement extends JPlugin {
         }
         
         $selector = $this->params->get('selector', 'audio,video');
+        $options  = $this->params->get('options', '');
 
         $document->addScript(JURI::root(true) . '/plugins/system/wfmediaelement/js/mediaelement-and-player.min.js');
         $document->addStyleSheet(JURI::root(true) . '/plugins/system/wfmediaelement/css/mediaelementplayer.min.css');        
-        $document->addScriptDeclaration('jQuery(document).ready(function($){$("' . $selector . '").mediaelementplayer();});');
+        $document->addScriptDeclaration('jQuery(document).ready(function($){$("' . $selector . '").mediaelementplayer(' . $options .');});');
         
         return true;
     }
