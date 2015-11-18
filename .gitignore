@@ -1,15 +1,14 @@
 # Ignore everything
 *
-
-../../../administrator/language/en-GB/*
+# language
+!../../../administrator/language/en-GB/*
 
 # config
 !.gitignore
 
-# site
+# plugin
 !css/*
 !js/*
 !wfmediaelement.php
 !wfmediaelement.xml
-
-build.xml
+!README.md
