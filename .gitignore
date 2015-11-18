@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+../../../administrator/language/en-GB/*
+
+# config
+!.gitignore
+
+# site
+!css/*
+!js/*
+!wfmediaelement.php
+!wfmediaelement.xml
+
+build.xml
