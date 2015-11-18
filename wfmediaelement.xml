@@ -20,6 +20,7 @@
                     <option value="0">JNo</option>
                 </field>
                 <field name="selector" type="text" default="" placeholder="audio,video" label="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_DESC" />
+                <field name="options" type="text" default="" placeholder="" label="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_DESC" />
             </fieldset>
         </fields>
     </config>
