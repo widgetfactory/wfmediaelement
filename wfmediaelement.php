@@ -8,7 +8,7 @@
  * to the GNU General Public License, and as distributed it includes or
  * is derivative of works licensed under the GNU General Public License or
  * other free or open source software licenses.
- * 
+ *
  * A Joomla Extension wrapper for the MediaElement.js library - http://mediaelementjs.com/
  */
 defined('_JEXEC') or die('Restricted access');
@@ -49,14 +49,14 @@ class plgSystemWfmediaelement extends JPlugin {
         $print  = JRequest::getInt('print');
         $task   = JRequest::getVar('task');
         $tmpl   = JRequest::getWord('tmpl');
-        
+
         // don't load mediaelement on certain pages
         if ($pop || $print || $tmpl == 'component' || $task == 'new' || $task == 'edit') {
             return;
         }
 
         $components = $this->params->get('components', '');
-        
+
         if (!empty($components)) {
             $excluded = explode(',', $components);
             $option = JRequest::getVar('option', '');
@@ -66,10 +66,10 @@ class plgSystemWfmediaelement extends JPlugin {
                 }
             }
         }
-        
+
         // get menu items from parameter
         $menuitems = (array) $this->params->get('menu');
-        
+
         // is there a menu assignment?
         if (!empty($menuitems) && !empty($menuitems[0])) {
             // get active menu
@@ -86,10 +86,10 @@ class plgSystemWfmediaelement extends JPlugin {
                 }
             }
         }
-        
+
         if ($this->params->get('jquery', 1)) {
             $version = new JVersion;
-        
+
             if ($version->isCompatible('3.0')) {
                 // Include jQuery
                 JHtml::_('jquery.framework');
@@ -97,21 +97,21 @@ class plgSystemWfmediaelement extends JPlugin {
                 // check if loaded
                 if (!$app->get('jquery')) {
                     // load from CDN
-                    $document->addScript('//code.jquery.com/jquery-1.11.3.min.js');
+                    $document->addScript('https://code.jquery.com/jquery-1.12.0.min.js');
                     $document->addScriptDeclaration('jQuery.noConflict();');
                     // flag as loaded
                     $app->set('jquery', true);
                 }
             }
         }
-        
+
         $selector = $this->params->get('selector', 'audio,video');
         $options  = $this->params->get('options', '');
 
         $document->addScript(JURI::root(true) . '/plugins/system/wfmediaelement/js/mediaelement-and-player.min.js');
-        $document->addStyleSheet(JURI::root(true) . '/plugins/system/wfmediaelement/css/mediaelementplayer.min.css');        
+        $document->addStyleSheet(JURI::root(true) . '/plugins/system/wfmediaelement/css/mediaelementplayer.min.css');
         $document->addScriptDeclaration('jQuery(document).ready(function($){$("' . $selector . '").mediaelementplayer(' . $options .');});');
-        
+
         return true;
     }
 }
