@@ -9,9 +9,6 @@ js/*
 !../../../administrator/language/en-GB/en-GB.plg_system_wfmediaelement.ini
 !../../../administrator/language/en-GB/en-GB.plg_system_wfmediaelement.sys.ini
 
-# config
-!.gitignore
-
 # plugin
 !css/*
 !js/*
