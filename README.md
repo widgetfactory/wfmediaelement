@@ -1,4 +1,4 @@
-# WF MediaElement
+# Wf MediaElement
 A Joomla Plugin for [MediaElement.js](http://mediaelementjs.com/)
 
 ## Download
