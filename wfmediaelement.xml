@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+    <name>PLG_WFMEDIAELEMENT_XML_TITLE</name>
+    <author>Ryan Demmer</author>
+    <creationDate>June 2017</creationDate>
+    <copyright>Copyright (C) 2017 Ryan Demmer. All rights reserved</copyright>
+    <license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <authorEmail>info@joomlacontenteditor.net</authorEmail>
+    <authorUrl>https://www.joomlacontenteditor.net</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_WFMEDIAELEMENT_XML_DESCRIPTION</description>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="components" type="text" size="50" default="" label="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_DESC" />
+                <field name="menu" type="menuitem" state="1" default="" multiple="multiple" size="10" label="PLG_WFMEDIAELEMENT_FIELD_MENUS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_MENUS_DESC" />
+                <field name="jquery" type="radio" default="1" label="PLG_WFMEDIAELEMENT_FIELD_JQUERY_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_JQUERY_DESC">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="selector" type="text" default="" placeholder="audio,video" label="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_DESC" />
+                <field name="options" type="text" default="" placeholder="" label="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+	
+    <files folder="plugins/system/wfmediaelement">
+        <file plugin="wfmediaelement">wfmediaelement.php</file>
+        <folder>css</folder>
+        <folder>js</folder>
+    </files>
+    
+    <languages folder="administrator/language/en-GB">
+        <language tag="en-GB">en-GB.plg_system_wfmediaelement.ini</language>
+        <language tag="en-GB">en-GB.plg_system_wfmediaelement.sys.ini</language>
+    </languages>
+</extension>
