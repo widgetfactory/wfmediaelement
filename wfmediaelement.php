@@ -2,7 +2,7 @@
 
 /**
  * @package WF MediaElement
- * @copyright Copyright (C) 2014 Ryan Demmer. All rights reserved.
+ * @copyright Copyright (C) 2017 Ryan Demmer. All rights reserved.
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see licence.txt
  * This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -22,8 +22,6 @@ jimport('joomla.plugin.plugin');
  * @subpackage	System
  */
 class plgSystemWfmediaelement extends JPlugin {
-
-    private $version = '@@version@@';
 
     /**
      * onAfterDispatch function
@@ -88,32 +86,16 @@ class plgSystemWfmediaelement extends JPlugin {
         }
 
         if ($this->params->get('jquery', 1)) {
-            $version = new JVersion;
-
-            if ($version->isCompatible('3.0')) {
-                // Include jQuery
-                JHtml::_('jquery.framework');
-            } else {
-                // check if loaded
-                if (!$app->get('jquery')) {
-                    // load from CDN
-                    $document->addScript('https://code.jquery.com/jquery-1.12.0.min.js');
-                    $document->addScriptDeclaration('jQuery.noConflict();');
-                    // flag as loaded
-                    $app->set('jquery', true);
-                }
-            }
+            JHtml::_('jquery.framework');
         }
 
         $selector = $this->params->get('selector', 'audio,video');
         $options  = $this->params->get('options', '');
 
-        $document->addScript(JURI::root(true) . '/plugins/system/wfmediaelement/js/mediaelement-and-player.min.js');
-        $document->addStyleSheet(JURI::root(true) . '/plugins/system/wfmediaelement/css/mediaelementplayer.min.css');
+        $document->addScriptVersion(JURI::root(true) . '/plugins/system/wfmediaelement/js/mediaelement-and-player.min.js');
+        $document->addStyleSheetVersion(JURI::root(true) . '/plugins/system/wfmediaelement/css/mediaelementplayer.min.css');
         $document->addScriptDeclaration('jQuery(document).ready(function($){$("' . $selector . '").mediaelementplayer(' . $options .');});');
 
         return true;
     }
 }
-
-?>
