@@ -13,14 +13,10 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="components" type="text" size="50" default="" label="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_DESC" />
-                <field name="menu" type="menuitem" state="1" default="" multiple="multiple" size="10" label="PLG_WFMEDIAELEMENT_FIELD_MENUS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_MENUS_DESC" />
-                <field name="jquery" type="radio" default="1" label="PLG_WFMEDIAELEMENT_FIELD_JQUERY_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_JQUERY_DESC">
-                    <option value="1">JYes</option>
-                    <option value="0">JNo</option>
-                </field>
-                <field name="selector" type="text" default="" placeholder="audio,video" label="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_DESC" />
-                <field name="options" type="text" default="" placeholder="" label="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_DESC" />
+                <field name="components" type="text" size="50" default="" label="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_COMPONENTS_DESCRIPTION" />
+                <field name="menu" type="menuitem" state="1" default="" multiple="multiple" size="10" label="PLG_WFMEDIAELEMENT_FIELD_MENUS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_MENUS_DESCRIPTION" />
+                <field name="selector" type="text" default="" placeholder="audio,video" label="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_SELECTOR_DESCRIPTION" />
+                <field name="options" type="text" default="" placeholder="" label="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_LABEL" description="PLG_WFMEDIAELEMENT_FIELD_OPTIONS_DESCRIPTION" />
             </fieldset>
         </fields>
     </config>
