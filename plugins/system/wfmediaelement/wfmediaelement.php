@@ -18,16 +18,18 @@ jimport('joomla.plugin.plugin');
 /**
  * WF MediaElement Plugin
  *
- * @package 	WF MediaElement
- * @subpackage	System
+ * @package     WF MediaElement
+ * @subpackage  System
  */
-class plgSystemWfmediaelement extends JPlugin {
+class plgSystemWfmediaelement extends JPlugin
+{
 
     /**
      * onAfterDispatch function
      * @return Boolean true
      */
-    public function onAfterDispatch() {
+    public function onAfterDispatch()
+    {
         $app = JFactory::getApplication();
 
         if ($app->isAdmin()) {
@@ -94,7 +96,12 @@ class plgSystemWfmediaelement extends JPlugin {
 
         $document->addScriptVersion(JURI::root(true) . '/plugins/system/wfmediaelement/js/mediaelement-and-player.min.js');
         $document->addStyleSheetVersion(JURI::root(true) . '/plugins/system/wfmediaelement/css/mediaelementplayer.min.css');
-        $document->addScriptDeclaration('jQuery(document).ready(function($){$("' . $selector . '").mediaelementplayer(' . $options .');});');
+        $document->addScriptDeclaration('
+            /* Wf MediaElement */
+            jQuery(document).ready(function($){
+                $("'.$selector.'").not(".avPlayer").mediaelementplayer('.$options.');
+            });
+        ');
 
         return true;
     }
