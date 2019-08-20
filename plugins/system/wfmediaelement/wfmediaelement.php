@@ -18,8 +18,8 @@ jimport('joomla.plugin.plugin');
 /**
  * WF MediaElement Plugin
  *
- * @package 	WF MediaElement
- * @subpackage	System
+ * @package     WF MediaElement
+ * @subpackage  System
  */
 class plgSystemWfmediaelement extends JPlugin
 {
